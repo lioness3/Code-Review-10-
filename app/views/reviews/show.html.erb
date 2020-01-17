@@ -1,8 +1,14 @@
+Product name
 
+<div class="reviews">
+  <%= @reviews
+  select first 10 content body
+</div>
 
 <%= form_for @products do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
    <%= f.collection_select(:division_id, @division, :id, :name)%>
+               <%# choose by rating  %>
   <%= f.submit  %>
 <% end %>
