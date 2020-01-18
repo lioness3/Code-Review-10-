@@ -4,6 +4,15 @@
 
 <div class="categorie">
   <h1>categorie list</h1>
+  <% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li
+    <% end %>
+</ul>
+<% else %>
+<p>There are no products yet.</p>
+<% end %>
 </div>
  <div class="search">
 
@@ -17,7 +26,7 @@
   <% end %>
 </div>
 <div class="add_product">
-
+<p><%= link_to "New Product", new_product_path %></p>
 </div>
 <div class="made_in_america">
    <ul>
