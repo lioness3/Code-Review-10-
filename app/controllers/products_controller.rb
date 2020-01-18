@@ -2,7 +2,11 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if @products
     @product_selection = @products.name
+  else
+    "nothing here"
+  end
     render :index
   end
 
@@ -29,6 +33,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @products = Product.all
     @product_selection = @products.name
+    # @reviews = @product.Review.find(:product_id)
     render :show
   end
 

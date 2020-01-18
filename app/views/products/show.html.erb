@@ -1,18 +1,18 @@
 
 <%= render "layouts/company_logo" %>
+<h3><%= @product_selection %></h3>
+<%= image_tag href = 'https://picsum.photos/seed/picsum/200' %>
+<p><%= image_tag href = ''  %></p>
 
-products within a categorie
 <p><%= link_to "Edit", edit_product_path(@product) %></p>
 <p><%= link_to "Delete", product_path(@product),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
 
 <p><%= link_to "Return to products", products_path %></p>
-<div class="title">
-  <h1>Browse our products</h1>
-</div>
+<p><%= link_to "Add a Review", new_product_review_path(@product, @review) %></p>
 <div class="product_pictures">
-  three columns of pictures< link
+  three columns of pictures
     <div class="product picture">
       also link to show page
     </div>
