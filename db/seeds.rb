@@ -5,8 +5,8 @@ require 'faker'
     product.name = Faker::Dessert.topping
     product.cost =  Faker::Number.decimal(l_digits: 2)
     product.country_of_origin = Faker::Address.country
-    250.times do
-      product.reviews.create! do |review|
+    5.times do
+      product.reviews.new do |review|
        review.author = Faker::Superhero.name
         review.content_body =
         Faker::Hipster.paragraph_by_chars(characters: 123, supplemental: false)
