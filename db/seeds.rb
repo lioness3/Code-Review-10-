@@ -11,7 +11,7 @@ require 'faker'
         review.content_body =
         Faker::Hipster.paragraph_by_chars(characters: 123, supplemental: false)
         review.rating = Faker::Number.within(range: 1..5)
-        review.product_id = Faker::Number.within(range: 1..250)
+        review.product_id = Faker::Number.within(range: 1..50)
       end
     end
 end

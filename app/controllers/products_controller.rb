@@ -31,9 +31,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @reviews = Review.all
+
     @products = Product.all
     @product_selection = @products.name
-    @reviews = @product.reviews.find(:product_id)
     render :show
   end
 
