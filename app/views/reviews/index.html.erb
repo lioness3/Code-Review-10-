@@ -1,9 +1,3 @@
 <%= render "layouts/company_logo" %>
-<%= form_for @products do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-   <%= f.collection_select(:division_id, @division, :id, :name)%>
-  <%= f.submit  %>
-<% end %>
 
 <%= render "layouts/company_info" %>

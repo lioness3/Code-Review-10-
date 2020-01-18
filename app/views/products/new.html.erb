@@ -1,13 +1,17 @@
 <%= render "layouts/company_logo" %>
-<div class="categorie">
-  <h1>categorie list</h1>
-</div>
-<!-- <div class="search">
-  search items here -->
-</div>
+
 <%= render "layouts/errors", :object => @product %>
+<h1>Publish a New Product </h1>
 <div class="new_product_form">
-<%= render "layouts/product_form", :object => @product %>
+  <%= form_for @product do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label " $" %>
+  <%= f.number_field(:cost, step: 0.01) %>
+  <%= f.label "Made in:" %>
+  <%= f.text_field :country_of_origin %>
+  <%= f.submit  %>
+  <% end %>
 </div>
 
 

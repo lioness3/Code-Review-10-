@@ -19,7 +19,7 @@ products within a categorie
 
 </div>
 <div class="product_wheel">
-  <%= form_for @products do |f| %>
+  <%= form_for @product_selection do |f| %>
   <%= f.collection_select(:product_id, @products, :id, :name)%>
   <%= f.submit  %>
   <% end %>

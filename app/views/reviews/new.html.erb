@@ -2,7 +2,7 @@
 <h3>Write your review below</h3>
 <%= form_for @reviews do |f| %>
 <%= f.label :rating %>
-<%= f.integer :rating %>
+<%= f.range_field (:review, :rating, in: 1..5) %>
 <%= f.label :content_body %>
 <%= f.text_field :content_body%>
 <%= f.collection_select(:product_id, @reviews, :id, :rating, :content_body)%>

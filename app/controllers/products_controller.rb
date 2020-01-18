@@ -27,6 +27,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @products = Product.all
+    @product_selection = @products.name
     render :show
   end
 
@@ -46,7 +48,7 @@ class ProductsController < ApplicationController
   end
 
   private
-  def division_params
+  def product_params
     params.require(:product).permit(:name, :cost, :country_of_origin)
   end
 end
