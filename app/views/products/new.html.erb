@@ -5,15 +5,17 @@
 <div class="categorie">
   <h1>categorie list</h1>
 </div>
- <div class="search">
-
+<!-- <div class="search">
+  search items here -->
 </div>
-
-
-<div class="product_wheel">
+<div class="new_product_form">
   <%= form_for @products do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.integer :cost %>
+  <%= f.text_field :cost %>
+  <%= f.label :country_of_origin %>
+  <%= f.text_field :country_of_origin %>
   <%= f.collection_select(:product_id, @products, :id, :name)%>
   <%= f.submit  %>
   <% end %>
@@ -21,18 +23,7 @@
 <div class="add_product">
 
 </div>
-<div class="made_in_america">
-   <ul>
-    list of products made in usa
-  </ul>
-</div>
-<div class="most_reviews">
-<h3>Our Most Popular Items</h3>
-<ul>
-pictures of most popular items
-</ul>
 
-</div>
 <div class="contact_info">
 <p>co logo</p>
 <p> phone number</p>

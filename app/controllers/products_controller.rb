@@ -46,6 +46,6 @@ class ProductsController < ApplicationController
 
   private
   def division_params
-    params.require(:product).permit(:name,:cost, :country_of_origin)
+    params.require(:product).permit(:name, :cost, :country_of_origin)
   end
 end
