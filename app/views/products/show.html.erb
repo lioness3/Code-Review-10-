@@ -1,8 +1,13 @@
-<div class="company_logo">
-<h1></h1>
-</div>
-products within a categorie
 
+<%= render "layouts/company_logo" %>
+
+products within a categorie
+<p><%= link_to "Edit", edit_product_path(@product) %></p>
+<p><%= link_to "Delete", product_path(@product),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+
+<p><%= link_to "Return to products", products_path %></p>
 <div class="title">
   <h1>Browse our products</h1>
 </div>
@@ -15,8 +20,6 @@ products within a categorie
 </div>
 <div class="product_wheel">
   <%= form_for @products do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
   <%= f.collection_select(:product_id, @products, :id, :name)%>
   <%= f.submit  %>
   <% end %>
