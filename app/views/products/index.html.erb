@@ -11,9 +11,7 @@
 
 
 <div class="product_wheel">
-  <%= form_for @products do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= form_for @product_selection do |f| %>
   <%= f.collection_select(:product_id, @products, :id, :name)%>
   <%= f.submit  %>
   <% end %>
