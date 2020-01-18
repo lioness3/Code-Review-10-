@@ -8,8 +8,9 @@
 <!-- <div class="search">
   search items here -->
 </div>
+<%= render "layouts/errors", :object => @product %>
 <div class="new_product_form">
-  <%= form_for @products do |f| %>
+  <%= form_for @product do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.integer :cost %>
@@ -22,8 +23,4 @@
 </div>
 
 
-<div class="contact_info">
-<p>co logo</p>
-<p> phone number</p>
-<p>support email</p>
-</div>
+<%= render "layouts/company_info" %>
