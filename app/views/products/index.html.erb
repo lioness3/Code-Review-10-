@@ -1,7 +1,7 @@
 <%= render "layouts/company_logo" %>
 
 <div class="categorie">
-  <h1>categorie list</h1>
+  <h1>Product list</h1>
   <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
@@ -12,25 +12,24 @@
 <p>There are no products yet.</p>
 <% end %>
 </div>
- <div class="search">
 
-</div>
-
-
-<div class="product_wheel">
-  <%= form_for @product_selection do |f| %>
-  <%= f.collection_select(:product_id, @products, :id, :name)%>
-  <%= f.submit  %>
-  <% end %>
-</div>
 <div class="add_product">
 <p><%= link_to "New Product", new_product_path %></p>
 </div>
 <div class="made_in_america">
-   <ul>
-    list of products made in usa
-  </ul>
+
+  <h1> Made in America 🇺🇸</h1>
+  <% if @usa.any? %>
+    <ul>
+      <% @usa.each do |x| %>
+        <li><%= link_to x.name, product_path(x) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no products made in the US.</p>
+  <% end %>
 </div>
+
 <div class="most_reviews">
 <h3>Our Most Popular Items</h3>
 <ul>

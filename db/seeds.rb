@@ -14,5 +14,5 @@ require 'faker'
         review.product_id = Faker::Number.within(range: 1..50)
       end
     end
-end
+  end
 end

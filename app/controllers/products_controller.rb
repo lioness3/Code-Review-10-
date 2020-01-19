@@ -2,8 +2,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-
     @product_selection = @products.name
+    @usa = Product.usa
 
 
     render :index
