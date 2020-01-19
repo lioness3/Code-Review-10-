@@ -9,3 +9,13 @@
 <%= f.submit  %>
 <% end %>
 <%# <%= number_field(:product, :price, in: 1.0..20.0, step 0.5) %> %>
+<%# <% if @popular.any? %>
+  <ul>
+    <% @popular.each do |x| %>
+      <li><%= link_to x.name, product_path(x) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products.</p>
+<% end %>
+</div> %>

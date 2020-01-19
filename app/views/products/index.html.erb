@@ -5,9 +5,14 @@
   <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
+  <li><%= link_to product.country_of_origin, product_path(product) %></li>
     <% end %>
 </ul>
+<h3>Check nout our new products</h3>
+  <ul>
+    <% @top.each do |x| %>
+      <li><%= link_to x.name, product_path(x) %></li>
+    <% end %>
 <% else %>
 <p>There are no products yet.</p>
 <% end %>
@@ -31,10 +36,6 @@
 </div>
 
 <div class="most_reviews">
-<h3>Our Most Popular Items</h3>
-<ul>
-pictures of most popular items
-</ul>
 
 </div>
 <%= render "layouts/company_info" %>

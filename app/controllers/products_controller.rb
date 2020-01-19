@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
     @products = Product.all
     @product_selection = @products.name
     @usa = Product.usa
-
+    @top = Product.three_most_recent
+    @popular = 
 
     render :index
   end

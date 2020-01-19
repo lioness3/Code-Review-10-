@@ -1,27 +1,28 @@
-
 <%= render "layouts/company_logo" %>
-<h3><%= @product.name %></h3>
-<%= image_tag href = 'https://picsum.photos/seed/picsum/200' %>
-<p>Glossier pork belly pabst ramps actually photo booth typewriter disrupt asymmetrical artisan brooklyn poutine. Meditation readymade heirloom keytar, austin unicorn coloring book tousled. Freegan gentrify narwhal gochujang hashtag brunch tilde glossier affogato mustache 90's VHS. Enamel pin keytar bespoke, jean shorts taxidermy man braid 3 wolf moon pinterest freegan ugh messenger bag hoodie cray.</p>
 
-<p>Oh. You need a little dummy text for your mockup? How quaint.</p>
+<div class="product_info">
+  <h3><%= @product.name %></h3>
+<%= image_tag href = 'https://picsum.photos/seed/picsum/300' %>
+    <div class="description">
+      <p>Glossier pork belly pabst ramps actually photo booth typewriter disrupt asymmetrical artisan brooklyn poutine. Meditation readymade heirloom keytar, austin unicorn coloring book tousled. Freegan gentrify narwhal gochujang hashtag brunch tilde glossier affogato mustache 90's VHS. Enamel pin keytar bespoke, jean shorts taxidermy man braid 3 wolf moon pinterest freegan ugh messenger bag hoodie cray.</p>
 
-<p>I bet you’re still using Bootstrap too…</p>
+      <p>Oh. You need a little dummy text for your mockup? How quaint.</p>
 
-<p><%= link_to "Edit", edit_product_path(@product) %></p>
-<p><%= link_to "Delete", product_path(@product),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
+      <p>I bet you’re still using Bootstrap too…</p>
+    </div>
+    <div class="edit_product">
+make link in column
+    <p><%= link_to "Edit", edit_product_path(@product) %></p>
+      <p><%= link_to "Delete", product_path(@product),
+      :data => {:confirm => "You sure?",
+      :method => "delete"} %></p>
+    </div>
+</div>
+
 
 <p><%= link_to "Return to products", products_path %></p>
 <p><%= link_to "Add a Review", new_product_review_path(@product, @review) %></p>
 
-<div class="product_wheel">
-  <%= form_tag(product_review_path(@product)) do %>
-  <%= label_tag("Browse:") %>
-  <%= collection_select(:product, :id, @products, :id, :name)%>
-  <%= submit_tag("Browse")  %>
-  <% end %>
-</div>
+
 
 <%= render "layouts/company_info" %>

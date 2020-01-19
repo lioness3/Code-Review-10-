@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+ body{
+   background-color: lightblue;
+   margin: 0 10%;
+ }
+
+.logo{
+text-align: center;
+}
+.logo h1{
+  margin: 0%;
+  padding: 0%;
+}
+.logo p{
+  font-size: 5pt;
+}
+.contact_info{
+  font-size: 10px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+#logo{
+font-size: 20px;
+float:right;
+}
+.product_info{
+  background-color: white;
+  border-radius: 20pt;
+  padding: 10%;
+  text-align: center;
+}
+
+.description{
+  font-size: 5pt;
+  text-align: left;
+  padding:0%;
+}
