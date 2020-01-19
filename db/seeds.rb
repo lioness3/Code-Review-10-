@@ -3,7 +3,8 @@ require 'faker'
 50.times do
   Product.create! do |product|
     product.name = Faker::Dessert.topping
-    product.cost =  Faker::Number.decimal(l_digits: 2)
+    product.name = Faker::Cannabis.buzzword
+    product.cost =  Faker::Commerce.price(range: 0..300.00)
     product.country_of_origin = Faker::Address.country
     5.times do
       product.reviews.new do |review|
