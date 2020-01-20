@@ -1,4 +1,6 @@
-<%= @product.name %>
+<%= render "layouts/errors", :object => @review %>
+<h1><%= @product.name %></h1>
+
 <h3>Edit your review below</h3>
 <%= form_for [@product, @review] do |f| %>
 <%= f.label :author %>
