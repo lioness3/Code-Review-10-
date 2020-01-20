@@ -37,7 +37,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
-  gem 'capybara'
 end
 
 group :development do
@@ -50,6 +49,7 @@ group :development do
 end
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
