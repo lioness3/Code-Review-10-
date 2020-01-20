@@ -22,6 +22,5 @@ private
   def self.three_most_recent
     order(created_at:  :desc).limit(3)
   end
-  # def self.popular_product
-  # end
+  
 end
