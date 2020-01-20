@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
     @product_selection = @products.name
     @usa = Product.usa
     @top = Product.three_most_recent
-    @popular = 
+    @popular =
 
     render :index
   end
@@ -18,8 +18,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+       flash.now[:notice] = "Your product was successfully added!"
       redirect_to products_path
     else
+       flash.now[:alert]= "ooops!"
       render :new
     end
   end

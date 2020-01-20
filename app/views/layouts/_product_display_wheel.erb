@@ -1,7 +1,0 @@
-<div class="product_wheel">
-  <%= form_tag(product_review_path(@product)) do %>
-  <%= label_tag("Browse:") %>
-  <%= collection_select(:product, :id, @products, :id, :name)%>
-  <%= submit_tag("Browse") %>
-  <% end %>
-</div>

@@ -51,15 +51,17 @@ float:right;
   padding:0%;
 }
 .categorie, .made_in_america{
-margin:0, -10%;
+margin:0;
 padding:5%;
 text-align: center;
 background-color: white;
 
-
 }
 .categorie ul, .made_in_america ul{
-
 list-style-type: none;
-align: left;
+text-align: left;
+}
+
+.add_product{
+margin-top: 10%;
 }
