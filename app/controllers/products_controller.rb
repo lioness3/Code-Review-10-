@@ -6,8 +6,10 @@ class ProductsController < ApplicationController
     @usa = Product.usa
     @top = Product.three_most_recent
     @reviews = Review.all
-    @popular_array = Review.most_popular.first
-    @popular = Product.find(@popular_array[0])
+    if @reviews.any?
+      @popular_array = Review.most_popular.first
+      @popular = Product.find(@popular_array[0])
+    end
     render :index
   end
 
@@ -19,7 +21,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-       flash.now[:notice] = "Your product was successfully added!"
+       flash[:notice] = "Your product was successfully added!"
       redirect_to products_path
     else
        flash.now[:alert]= "ooops!"
