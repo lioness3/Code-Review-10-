@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
     @product_selection = @products.name
     @usa = Product.usa
     @top = Product.three_most_recent
+    @reviews = Review.all
     @popular_array = Review.most_popular.first
     @popular = Product.find(@popular_array[0])
     render :index
